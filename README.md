@@ -3,11 +3,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Vitor Marques dos Santos
+- Matrícula: 20.2.8175
+- Curso: Sistemas de informação
+- Semestre/Ano correntes: 2023/2
+- Link para o seu GitHub: [GitHub](https://github.com/MarqueVitor)
 
 ## [Projeto final:](./Projeto/README.md)
 
