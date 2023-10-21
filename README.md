@@ -3,10 +3,10 @@
 
 ## Atualize os seus dados
 
-- Nome: Vitor Marques dos Santos.
-- Matrícula: 20.2.8175.
-- Curso: Sistemas de Informação.
-- Semestre/Ano correntes: 2023/2.
+- Nome: Vitor Marques dos Santos
+- Matrícula: 20.2.8175 
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 2023/2
 - Link para o seu GitHub: [https://github.com/MarqueVitor](https://github.com/MarqueVitor)
 
 ## [Projeto final:](./Projeto/README.md)
