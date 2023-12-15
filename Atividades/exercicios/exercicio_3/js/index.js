@@ -5,22 +5,22 @@ let countDownDate = new Date("Jun 27, 2021").getTime();
 const countDown = setInterval(function() {
 
     // Encontrando o horário atual
-    let now = 
+   // let now = 
     
     // Encontrando a distância entre as datas 
-    let distance = 
+   // let distance = 
     
-    if (distance > 0) {
+   // if (distance > 0) {
         // Calculando os dias/horas/minutos/segundos 
-        let days = 
-        let hours = 
-        let minutes = 
-        let seconds = 
+       // let days = 
+       // let hours = 
+      //  let minutes = 
+       // let seconds = 
         
     
         // Insira os suas variáveis no html (use os ids já presentes no HTML)
  
     
  
-    }
+  //  }
 }, 1000);

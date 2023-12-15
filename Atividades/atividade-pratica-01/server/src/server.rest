@@ -1,0 +1,140 @@
+GET  http://localhost:5555/estados
+
+###
+
+POST http://localhost:5555/estados
+Content-Type: application/json
+
+{
+    "nome":"São Paulo",
+    "sigla":"SP"
+
+}
+
+###
+PUT http://localhost:5555/estados
+Content-Type: application/json
+
+{   
+    "id": 12,
+    "nome":"Bahia",
+    "sigla":"BA"
+
+}
+
+###
+DELETE  http://localhost:5555/estados
+Content-Type: application/json
+
+{   
+    "id": 8
+}
+
+###
+POST http://localhost:5555/cidades
+Content-Type: application/json
+
+{   
+    "nome":"Rio Piracicaba",
+    "estado_id":7
+
+}
+
+###
+GET http://localhost:5555/cidades
+
+###
+PUT http://localhost:5555/cidades
+Content-Type: application/json
+
+{   
+    "id":2,
+    "nome":"Vitoria",
+    "estado_id":"10"
+
+}
+
+###
+DELETE  http://localhost:5555/cidades
+Content-Type: application/json
+
+{   
+    "id": 5
+}
+
+###
+POST http://localhost:5555/tipos
+Content-Type: application/json
+
+{   
+    "tipo":"Teste",
+    "fator":"Teste Delete"
+
+}
+
+###
+GET http://localhost:5555/tipos
+
+###
+PUT http://localhost:5555/tipos
+Content-Type: application/json
+
+{   
+    "id": 3,
+    "tipo":"A",
+    "fator":"Negativo"
+
+}
+
+###
+DELETE  http://localhost:5555/tipos
+Content-Type: application/json
+
+{   
+    "id": 9
+}
+
+###
+POST http://localhost:5555/pessoa
+Content-Type: application/json
+
+{   
+    "nome": "Teste-teste",
+    "rua": "Teste",
+    "numero": "99",
+    "complemento": "Apto 22",
+    "rg": "98.765.432",
+    "cidade_id": 1,  
+    "tipo_id": 1 
+
+}
+
+### 
+
+GET http://localhost:5555/pessoa
+
+
+###
+PUT http://localhost:5555/pessoa
+Content-Type: application/json
+
+{   
+    "id":4,
+    "nome": "Funcinou?",
+    "rua": "Teste",
+    "numero": "99",
+    "complemento": "Apto 22",
+    "rg": "98.765.432",
+    "cidade_id": 1,  
+    "tipo_id": 4 
+
+}
+
+###
+
+DELETE  http://localhost:5555/pessoa
+Content-Type: application/json
+
+{   
+    "id": 5
+}
