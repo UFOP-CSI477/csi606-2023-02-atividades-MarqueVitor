@@ -7,7 +7,7 @@ import { DeleteSangueController } from "../controller/tiposangue/DeleteSangueCon
 
 const sanguineoRouter = Router();
 
-// CRUD tipos sanguineos
+// CRUD - tipos sanguineos
 
 // Create
 const createSangueController = new CreateSangueController();

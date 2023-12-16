@@ -8,7 +8,7 @@ import { DeletePessoaController } from "../controller/pessoas/DeletePessoaContro
 
 const pessoasRouter = Router();
 
-// CRUD pessoas
+// CRUD - pessoas
 
 // Create
 const createPessoaController = new CreatePessoaController();

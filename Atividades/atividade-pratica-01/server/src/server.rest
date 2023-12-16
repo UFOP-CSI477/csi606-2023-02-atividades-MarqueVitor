@@ -138,3 +138,78 @@ Content-Type: application/json
 {   
     "id": 5
 }
+
+###
+POST http://localhost:5555/locais
+Content-Type: application/json
+
+{
+    "nome":"Teste",
+    "rua":"Teste",
+    "numero":"1.468",
+    "complemento":"Maruípe, Vitória",
+    "cidade_id":4
+
+}
+
+###
+GET http://localhost:5555/locais
+
+###
+PUT http://localhost:5555/locais
+Content-Type: application/json
+
+{   
+    "id": ,
+    "nome":"Teste-testinho",
+    "rua":"Teste-Teste",
+    "numero":"1.468",
+    "complemento":"Maruípe, Vitória",
+    "cidade_id":4
+
+}
+
+###
+DELETE  http://localhost:5555/locais
+Content-Type: application/json
+
+{   
+    "id": 3
+}
+
+###
+POST http://localhost:5555/doacoes
+Content-Type: application/json
+
+{
+    "pessoa_id": 1,
+    "local_id": 2,
+    "data": "2023-12-16T14:35:00.000Z"
+
+
+}
+
+###
+
+GET http://localhost:5555/doacoes
+
+###
+
+PUT http://localhost:5555/doacoes
+Content-Type: application/json
+
+{   
+    "id":3,
+    "pessoa_id": 2,
+    "local_id": 1,
+    "data": "2023-12-16T18:35:00.000Z"
+
+}
+
+###
+DELETE  http://localhost:5555/doacoes
+Content-Type: application/json
+
+{   
+    "id": 3
+}

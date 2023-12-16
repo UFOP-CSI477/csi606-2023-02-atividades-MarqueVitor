@@ -30,6 +30,7 @@ model Cidade {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
   Pessoa     Pessoa[]
+  Locais     Locais[]
 
   @@map("cidades")
 }
@@ -59,8 +60,41 @@ model Pessoa {
   cidade Cidade @relation(fields: [cidade_id], references: [id])
   sangue tipos  @relation(fields: [tipo_id], references: [id])
 
-  creted_at DateTime @default(now())
-  update_at DateTime @updatedAt
+  creted_at DateTime  @default(now())
+  update_at DateTime  @updatedAt
+  Doacoes   Doacoes[]
 
   @@map("pessoa")
+}
+
+model Locais {
+  id          Int    @id @default(autoincrement())
+  nome        String
+  rua         String
+  numero      String
+  complemento String
+  cidade_id   Int
+
+  cidade Cidade @relation(fields: [cidade_id], references: [id])
+
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  Doacoes    Doacoes[]
+
+  @@map("locais")
+}
+
+model Doacoes {
+  id        Int      @id @default(autoincrement())
+  pessoa_id Int
+  local_id  Int
+  data      DateTime
+
+  pessoa Pessoa @relation(fields: [pessoa_id], references: [id])
+  local  Locais @relation(fields: [local_id], references: [id])
+
+  created_at DateTime @default(now())
+  update_at  DateTime @updatedAt
+
+  @@map("doacoes")
 }

@@ -7,6 +7,8 @@ import { DeleteCidadeController } from "../controller/cidades/DeleteCidadeContro
 
 const cidadeRouter = Router();
 
+// CRUD - cidades
+
 //Create
 const createCidadesController = new CreateCidadesController();
 cidadeRouter.post("/cidades", createCidadesController.handle);

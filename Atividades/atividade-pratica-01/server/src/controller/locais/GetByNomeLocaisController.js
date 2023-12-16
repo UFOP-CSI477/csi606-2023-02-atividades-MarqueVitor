@@ -1,12 +1,12 @@
 import { prisma } from "../../database/client.js";
 
-export class GetByNomePessoaController {
+export class GetByNomeLocaisController {
   async handle(request, response) {
     const { id, nome } = request.params;
 
-    const pessoas = await prisma.pessoa.findUnique({
+    const local = await prisma.locais.findUnique({
       where: {
-        nome: nome,
+        nome:nome
       },
       select: {
         id: true,
@@ -14,20 +14,16 @@ export class GetByNomePessoaController {
         rua: true,
         numero: true,
         complemento: true,
-        rg: true,
+        cidade_id: true,
         cidade: {
           select: {
+            id: true,
             nome: true,
-          },
-        },
-        sangue: {
-          select: {
-            tipo: true,
-            fator: true,
+            estado_id: true,
           },
         },
       },
     });
-    return response.json(pessoas);
+    return response.json(local);
   }
 }
