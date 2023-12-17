@@ -23,8 +23,8 @@ const getByIdLocaisController = new GetByIdLocaisController();
 locaisRouter.get("/locais/:id", getByIdLocaisController.handle);
 
 // Get By nome
-//const getByNomeLocaisController = new GetByNomeLocaisController();
-//locaisRouter.get("/locais/:nome", getByNomeLocaisController.handle);
+const getByNomeLocaisController = new GetByNomeLocaisController();
+locaisRouter.get("/locais/nome/:nome/:id", getByNomeLocaisController.handle);
 
 // Update
 const updateLocaisController = new UpdateLocaisController();

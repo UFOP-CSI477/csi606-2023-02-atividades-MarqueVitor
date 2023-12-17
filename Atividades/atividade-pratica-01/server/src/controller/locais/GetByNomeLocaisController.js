@@ -7,6 +7,7 @@ export class GetByNomeLocaisController {
     try {
       const local = await prisma.locais.findUnique({
         where: {
+          id:parseInt(id),
           nome: nome,
         },
         select: {

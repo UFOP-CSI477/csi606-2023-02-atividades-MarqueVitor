@@ -23,8 +23,8 @@ const getByIdPessoaController = new GetByIdPessoaController();
 pessoasRouter.get("/pessoa/:id", getByIdPessoaController.handle);
 
 // Get By Nome
-//const getByNomePessoaController = new GetByNomePessoaController();
-//pessoasRouter.get("/pessoa/:nome", getByNomePessoaController.handle)
+const getByNomePessoaController = new GetByNomePessoaController();
+pessoasRouter.get("/pessoa/nome/:nome/:id", getByNomePessoaController.handle)
 
 // Update
 const updatePessoaController = new UpdatePessoaController();

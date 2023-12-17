@@ -113,6 +113,8 @@ Content-Type: application/json
 
 GET http://localhost:5555/pessoa
 
+###
+GET http://localhost:5555/pessoa/nome/Vitor%20Marques/1
 
 ###
 PUT http://localhost:5555/pessoa
@@ -154,6 +156,9 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5555/locais
+
+###
+http://localhost:5555/locais/nome/Hospital%20Margarida/1
 
 ###
 PUT http://localhost:5555/locais

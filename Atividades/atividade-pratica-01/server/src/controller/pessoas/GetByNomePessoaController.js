@@ -7,7 +7,8 @@ export class GetByNomePessoaController {
     try {
       const pessoas = await prisma.pessoa.findUnique({
         where: {
-          nome: nome,
+          id:parseInt(id),
+          nome:nome
         },
         select: {
           id: true,
