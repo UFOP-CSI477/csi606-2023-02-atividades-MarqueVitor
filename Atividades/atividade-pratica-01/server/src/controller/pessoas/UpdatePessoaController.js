@@ -5,29 +5,34 @@ export class UpdatePessoaController {
     const { id, nome, rua, numero, complemento, rg, cidade_id, tipo_id } =
       request.body;
 
-    const pessoas = await prisma.pessoa.update({
-      where: {
-        id: parseInt(id),
-      },
-      data: {
-        nome,
-        rua,
-        numero,
-        complemento,
-        rg,
+    try {
+      const pessoas = await prisma.pessoa.update({
+        where: {
+          id: parseInt(id),
+        },
+        data: {
+          nome,
+          rua,
+          numero,
+          complemento,
+          rg,
 
-        cidade: {
-          connect: {
-            id: parseInt(cidade_id),
+          cidade: {
+            connect: {
+              id: parseInt(cidade_id),
+            },
+          },
+          sangue: {
+            connect: {
+              id: parseInt(tipo_id),
+            },
           },
         },
-        sangue: {
-          connect: {
-            id: parseInt(tipo_id),
-          },
-        },
-      },
-    });
-    return response.json(pessoas);
+      });
+      return response.json(pessoas);
+    } catch (error) {
+      console.error(error);
+      return response.status(400).json(error);
+    }
   }
 }

@@ -6,21 +6,26 @@ export class CreateDoacoesController {
 
     // Utilizar  o formato ISO-8601 DateTime.
 
-    const doar = await prisma.doacoes.create({
-      data: {
-        pessoa: {
-          connect: {
-            id: pessoa_id,
+    try {
+      const doar = await prisma.doacoes.create({
+        data: {
+          pessoa: {
+            connect: {
+              id: pessoa_id,
+            },
           },
-        },
-        local: {
-          connect: {
-            id: local_id,
+          local: {
+            connect: {
+              id: local_id,
+            },
           },
+          data,
         },
-        data,
-      },
-    });
-    return response.json(doar);
+      });
+      return response.json(doar);
+    } catch (error) {
+      console.error(error);
+      return response.status(400).json(error);
+    }
   }
 }

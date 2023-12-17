@@ -6,8 +6,8 @@ POST http://localhost:5555/estados
 Content-Type: application/json
 
 {
-    "nome":"São Paulo",
-    "sigla":"SP"
+    "nome":"Amazonas",
+    "sigla":"AM"
 
 }
 
@@ -16,7 +16,7 @@ PUT http://localhost:5555/estados
 Content-Type: application/json
 
 {   
-    "id": 12,
+    "id": 14,
     "nome":"Bahia",
     "sigla":"BA"
 
@@ -27,7 +27,7 @@ DELETE  http://localhost:5555/estados
 Content-Type: application/json
 
 {   
-    "id": 8
+    "id": 15
 }
 
 ###
@@ -35,7 +35,7 @@ POST http://localhost:5555/cidades
 Content-Type: application/json
 
 {   
-    "nome":"Rio Piracicaba",
+    "nome":"Test cidade",
     "estado_id":7
 
 }
@@ -48,9 +48,9 @@ PUT http://localhost:5555/cidades
 Content-Type: application/json
 
 {   
-    "id":2,
-    "nome":"Vitoria",
-    "estado_id":"10"
+    "id":9,
+    "nome":"Teste city",
+    "estado_id":"7"
 
 }
 
@@ -59,7 +59,7 @@ DELETE  http://localhost:5555/cidades
 Content-Type: application/json
 
 {   
-    "id": 5
+    "id": 9
 }
 
 ###
@@ -80,7 +80,7 @@ PUT http://localhost:5555/tipos
 Content-Type: application/json
 
 {   
-    "id": 3,
+    "id": 10,
     "tipo":"A",
     "fator":"Negativo"
 
@@ -91,7 +91,7 @@ DELETE  http://localhost:5555/tipos
 Content-Type: application/json
 
 {   
-    "id": 9
+    "id": 10
 }
 
 ###
@@ -119,14 +119,14 @@ PUT http://localhost:5555/pessoa
 Content-Type: application/json
 
 {   
-    "id":4,
+    "id":6,
     "nome": "Funcinou?",
     "rua": "Teste",
     "numero": "99",
     "complemento": "Apto 22",
     "rg": "98.765.432",
-    "cidade_id": 1,  
-    "tipo_id": 4 
+    "cidade_id": 3,  
+    "tipo_id": 5 
 
 }
 
@@ -136,7 +136,7 @@ DELETE  http://localhost:5555/pessoa
 Content-Type: application/json
 
 {   
-    "id": 5
+    "id": 6
 }
 
 ###
@@ -160,12 +160,12 @@ PUT http://localhost:5555/locais
 Content-Type: application/json
 
 {   
-    "id": ,
+    "id": 4,
     "nome":"Teste-testinho",
     "rua":"Teste-Teste",
     "numero":"1.468",
     "complemento":"Maruípe, Vitória",
-    "cidade_id":4
+    "cidade_id":1
 
 }
 
@@ -174,7 +174,7 @@ DELETE  http://localhost:5555/locais
 Content-Type: application/json
 
 {   
-    "id": 3
+    "id": 4
 }
 
 ###
@@ -199,7 +199,7 @@ PUT http://localhost:5555/doacoes
 Content-Type: application/json
 
 {   
-    "id":3,
+    "id":4,
     "pessoa_id": 2,
     "local_id": 1,
     "data": "2023-12-16T18:35:00.000Z"
@@ -211,5 +211,5 @@ DELETE  http://localhost:5555/doacoes
 Content-Type: application/json
 
 {   
-    "id": 3
+    "id": 4
 }
