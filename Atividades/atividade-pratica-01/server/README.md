@@ -9,11 +9,11 @@ A atividade-pratica-01 é o desenvolvimento de uma API RESTful para as entidades
 
 ## Instalação
 
-- Abrir um termina na pasta: /server
+- Abrir um terminal na pasta: /server
 - npm install (instalando as depedências necessárias)
 - npm run dev (para inciar o servidor)
-- server.rest (contém as operações que podem ser executadas, baixa extensão REST Client) 
-- [Acessar o localhost](http://localhost:5555/pessoa)
+- server.rest (contém as operações que podem ser executadas, baixar extensão REST Client) 
+- Localhost: http://localhost:5555/pessoa
 
 ## Tecnologias 
 
@@ -24,10 +24,10 @@ A atividade-pratica-01 é o desenvolvimento de uma API RESTful para as entidades
 ## Arquitetura
 
 src
-  |_ controller/*
+  - |_ controller/*
         |_[C,R,U,D]_ - Controllers utilizados. 
-  |_ database
+  - |_ database
         |_ client.js  
-  |_ routes 
-  |_ server.js
-package.json
+  - |_ routes 
+  - |_ server.js
+  - package.json
