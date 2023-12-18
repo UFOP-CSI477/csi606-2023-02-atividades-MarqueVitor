@@ -10,6 +10,8 @@ A atividade-pratica-01 é o desenvolvimento de uma API RESTful para as entidades
 ## Instalação
 
 - Abrir um terminal na pasta: /server
+- Criar aqui .env no src 
+- colocar dentro do .env: DATABASE_URL="file:./aplicacao.sqlite"
 - npm install (instalando as depedências necessárias)
 - npm run dev (para inciar o servidor)
 - server.rest (contém as operações que podem ser executadas, baixar extensão REST Client) 
