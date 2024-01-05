@@ -6,12 +6,14 @@ import { sanguineoRouter } from "./routes/sanguineo.js";
 import { pessoasRouter } from "./routes/pessoas.js";
 import { locaisRouter } from "./routes/locais.js";
 import { doacaoRouter } from "./routes/doacoes.js";
+import cors from "cors";
 
 const server = express();
 const PORT = 5555;
 
 //ROUTES
 server.use(express.json());
+server.use(cors());
 server.use(mainRouter);
 server.use(estadoRouter);
 server.use(cidadeRouter);
