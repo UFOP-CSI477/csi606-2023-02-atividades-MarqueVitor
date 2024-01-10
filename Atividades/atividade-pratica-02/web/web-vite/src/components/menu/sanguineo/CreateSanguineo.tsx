@@ -4,76 +4,76 @@ import { useNavigate } from 'react-router-dom';
 import api from "../../../services/api";
 import { Link } from "react-router-dom";
 
-const CreateEstado = () => {
+const CreateTipos = () => {
 
-    const [nome, setNome] = useState('');
-    const [sigla, setSigla] = useState('');
+    const [tipo, setTipo] = useState('');
+    const [fator, setFator] = useState('');
     const navigate = useNavigate();
 
     const handleClear = () => {
-        setNome('');
-        setSigla('');
+        setTipo('');
+        setFator('');
     };
 
-    const handleNewState = async (event: React.FormEvent<HTMLFormElement>) => {
+    const handleNewTipo = async (event: React.FormEvent<HTMLFormElement>) => {
 
         event.preventDefault();
 
         // Realiza a verificação de campos vazios
-        if (!nome.trim() || !sigla.trim()) {
+        if (!tipo.trim() || !fator.trim()) {
             alert("Por favor, preencha todos os campos.");
             return;
         }  
         
         // Realiza a verificação do campo sigla
         const siglaRegex = /^[A-Z]{1,2}$/;
-        if (!siglaRegex.test(sigla)) {
-            alert("A sigla deve ter no máximo 2 letras maiúsculas.");
+        if (!siglaRegex.test(tipo)) {
+            alert("O tipo sanguíneo deve ter no máximo 2 letras maiúsculas.");
             return;
         }   
 
         // Enviar dados
         const data = {
-            nome,
-            sigla
+            tipo,
+            fator
         };
         try {
-            await api.post('/estados',data)
-            alert("Estado cadastrado com sucesso!")
-            navigate("/estados")
+            await api.post('/tipos',data)
+            alert("Tipo sanguíneo cadastrado com sucesso!")
+            navigate("/tipos")
         } catch (error) {
             console.error(error);
-            alert("Erro no cadastro do Estado!")
+            alert("Erro no cadastro do tipo sanguíneo!")
         }
     }
 
     return(
 
         <div>
-            <h3>Cadastro de Estado: {nome} - {sigla}</h3>
+            <h3>Cadastro de Tipos Sanguíneos: {tipo} - {fator}</h3>
             <div>
-                <Link to="/estados">Voltar</Link>
+                <Link to="/tipos">Voltar</Link>
             </div>
-            <form onSubmit={handleNewState}>
+            <form onSubmit={handleNewTipo}>
                     <div>
-                        <label htmlFor="nome">Nome do Estado</label>
+                        <label htmlFor="tipo">Tipo Sanguíneo</label>
                         <input 
                             type="text" 
-                            name="nome"
+                            name="tipo"
                             id="id"
-                            value={nome}
-                            onChange={e => setNome(e.target.value)}
+                            value={tipo}
+                            onChange={e => setTipo(e.target.value)}
                             />
                     </div>
 
                     <div>
-                        <label htmlFor="sigla">Sigla</label>
+                        <label htmlFor="fator">Fator Sanguíneo</label>
                         <input 
                             type="text" 
-                            name="sigla"
-                            id="sigla"
-                            value={sigla}
-                            onChange={e => setSigla(e.target.value)}
+                            name="fator"
+                            id="fator"
+                            value={fator}
+                            onChange={e => setFator(e.target.value)}
                             />
                     </div>
 
@@ -86,4 +86,4 @@ const CreateEstado = () => {
     )
 }
 
-export default CreateEstado
+export default CreateTipos
