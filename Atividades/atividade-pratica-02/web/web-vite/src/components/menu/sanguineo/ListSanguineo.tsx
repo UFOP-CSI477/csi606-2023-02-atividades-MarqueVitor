@@ -5,7 +5,7 @@ import {format} from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
 
-interface TiposInterface {
+export interface TiposInterface {
     id: number;
     tipo: string;
     fator: string;
@@ -58,7 +58,7 @@ const ListTipos = () => {
     <div>
       <h3>Lista de Tipos Sanguíneos</h3>
       <div>
-        <Link to="/tipos/create">Inserir Tipos Sanguíneos</Link>
+        <Link to="/tipos/create">Cadastrar Tipos Sanguíneos</Link>
       </div>
       <div>
         <Link to="/">Voltar</Link>

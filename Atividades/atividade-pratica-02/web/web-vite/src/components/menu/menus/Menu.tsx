@@ -11,6 +11,7 @@ const Menu = () => {
         <li><Link to = "/cidades">Cidades</Link></li>
         <li><Link to = "/pessoas">Pessoas</Link></li>
         <li><Link to = "/tipos">Tipos Sanguineos</Link></li>
+        <li><Link to = "/locais">Locais de Doações</Link></li>
         <li><Link to = "/doacoes">Doações</Link></li>
       </ul>
     </div>

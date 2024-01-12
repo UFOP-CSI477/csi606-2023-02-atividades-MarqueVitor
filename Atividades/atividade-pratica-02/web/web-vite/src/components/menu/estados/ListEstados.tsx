@@ -57,7 +57,7 @@ const ListEstados = () => {
     <div>
       <h3>Lista de Estados</h3>
       <div>
-        <Link to="/estados/create">Inserir Estados</Link>
+        <Link to="/estados/create">Cadastrar Estados</Link>
       </div>
       <div>
         <Link to="/">Voltar</Link>

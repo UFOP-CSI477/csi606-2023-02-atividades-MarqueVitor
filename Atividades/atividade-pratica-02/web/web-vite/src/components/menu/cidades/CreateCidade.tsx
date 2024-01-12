@@ -72,7 +72,7 @@ const CreateCidade = () => {
                     <div>
                         <label htmlFor="estadoID">Estado</label>
                         <select name="estadoID" id="estadoID" onChange={e => setStateID(parseInt(e.target.value))}>
-                            <option value="0" selected>Estado</option>
+                            <option value="0" selected>Estados</option>
                             {
                                 estados.map(estado =>(
                                     <option value={estado.id}>{estado.nome}</option>

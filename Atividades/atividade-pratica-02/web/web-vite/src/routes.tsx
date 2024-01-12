@@ -9,6 +9,13 @@ import UpdateCidade from "./components/menu/cidades/UpdateCidade";
 import ListTipos from "./components/menu/sanguineo/ListSanguineo";
 import CreateTipos from "./components/menu/sanguineo/CreateSanguineo";
 import UpdateTipos from "./components/menu/sanguineo/UpdateSanguineo";
+import ListPessoas from "./components/menu/pessoas/ListPessoa";
+import CreatePessoa from "./components/menu/pessoas/CreatePessoa";
+import UpdatePessoa from "./components/menu/pessoas/UpdatePessoa";
+import ListLocais from "./components/menu/locais/ListLocais";
+import CreateLocais from "./components/menu/locais/CreateLocais";
+import UpdateLocais from "./components/menu/locais/UpdateLocais";
+import ListDoacao from "./components/menu/doacoes/ListDoacoes";
 
 const AppRoutes = () => {
 
@@ -28,8 +35,14 @@ const AppRoutes = () => {
             <Route path="/tipos" element={<ListTipos/>} />
             <Route path="/tipos/create" element={<CreateTipos/>} />
             <Route path="/tipos/update/:id" element={<UpdateTipos/>} />
-            <Route path="/pessoas" />
-            <Route path="/doacoes" />
+            <Route path="/pessoas" element={<ListPessoas/>}/>
+            <Route path="/pessoas/create" element={<CreatePessoa/>}/>
+            <Route path="/pessoas/update/:id" element={<UpdatePessoa/>}/>
+            <Route path="/locais" element={<ListLocais/>} />
+            <Route path="/locais/create" element={<CreateLocais/>} />
+            <Route path="/locais/update/:id" element={<UpdateLocais/>} />
+            <Route path="/doacoes" element={<ListDoacao/>}/>
+            
 
       </Routes>
 

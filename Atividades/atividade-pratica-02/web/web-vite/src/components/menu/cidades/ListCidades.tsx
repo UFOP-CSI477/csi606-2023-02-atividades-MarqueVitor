@@ -5,7 +5,7 @@ import {format} from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
 
-interface CidadeInterface {
+export interface CidadeInterface {
     id: number;
     nome: string;
     estado: {
@@ -62,7 +62,7 @@ const ListCidades = () => {
     <div>
       <h3>Lista de Cidades</h3>
       <div>
-        <Link to="/cidades/create">Inserir Cidades</Link>
+        <Link to="/cidades/create">Cadastrar Cidades</Link>
       </div>
       <div>
         <Link to="/">Voltar</Link>
