@@ -87,7 +87,7 @@ const UpdateCidade = () => {
                             <option value="0" selected>Estados</option>
                             {
                                 estados.map(estado =>(
-                                    <option value={estado.id}>{estado.nome}</option>
+                                    <option key={estado.id} value={estado.id}>{estado.nome}</option>
                                 ))
                             }
                         </select>

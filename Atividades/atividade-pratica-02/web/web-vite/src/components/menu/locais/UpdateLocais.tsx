@@ -132,7 +132,7 @@ const UpdateLocais = () => {
                             <option value="0" selected>Cidades</option>
                             {
                                 cidades.map(cidade =>(
-                                    <option value={cidade.id}>{cidade.nome}</option>
+                                    <option key={cidade.id} value={cidade.id}>{cidade.nome}</option>
                                 ))
                             }
                         </select>

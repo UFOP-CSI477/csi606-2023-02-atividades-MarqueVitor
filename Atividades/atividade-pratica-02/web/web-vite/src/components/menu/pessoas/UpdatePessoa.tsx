@@ -161,7 +161,7 @@ const UpdatePessoa = () => {
                             <option value="0" selected>Cidades</option>
                             {
                                 cidades.map(cidade =>(
-                                    <option value={cidade.id}>{cidade.nome}-{cidade.estado.sigla}</option>
+                                    <option key={cidade.id} value={cidade.id}>{cidade.nome}-{cidade.estado.sigla}</option>
                                 ))
                             }
                         </select>
@@ -173,7 +173,7 @@ const UpdatePessoa = () => {
                             <option value="0" selected>Tipo Sanguíneo</option>
                             {
                                 tipos.map(tipo =>(
-                                    <option value={tipo.id}>{tipo.tipo}-{tipo.fator}</option>
+                                    <option key={tipo.id} value={tipo.id}>{tipo.tipo}-{tipo.fator}</option>
                                 ))
                             }
                         </select>

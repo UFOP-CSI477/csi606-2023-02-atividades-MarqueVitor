@@ -71,7 +71,7 @@ const ListDoacao = () => {
     <div>
       <h3>Lista de Doações</h3>
       <div>
-        <Link to="/doacao/create">Cadastrar Doações</Link>
+        <Link to="/doacoes/create">Cadastrar Doações</Link>
       </div>
       <div>
         <Link to="/">Voltar</Link>

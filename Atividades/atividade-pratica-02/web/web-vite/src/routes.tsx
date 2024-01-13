@@ -16,6 +16,8 @@ import ListLocais from "./components/menu/locais/ListLocais";
 import CreateLocais from "./components/menu/locais/CreateLocais";
 import UpdateLocais from "./components/menu/locais/UpdateLocais";
 import ListDoacao from "./components/menu/doacoes/ListDoacoes";
+import CreateDoacao from "./components/menu/doacoes/CreateDoacoes";
+import UpdateDoacao from "./components/menu/doacoes/UpdateDoacoes";
 
 const AppRoutes = () => {
 
@@ -42,8 +44,9 @@ const AppRoutes = () => {
             <Route path="/locais/create" element={<CreateLocais/>} />
             <Route path="/locais/update/:id" element={<UpdateLocais/>} />
             <Route path="/doacoes" element={<ListDoacao/>}/>
+            <Route path="/doacoes/create" element={<CreateDoacao/>}/>
+            <Route path="/doacoes/update/:id" element={<UpdateDoacao/>}/>
             
-
       </Routes>
 
     </BrowserRouter>

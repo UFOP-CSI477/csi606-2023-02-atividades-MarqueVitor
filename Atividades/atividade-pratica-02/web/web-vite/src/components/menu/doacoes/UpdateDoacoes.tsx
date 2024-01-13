@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import api from "../../../services/api";
 import { Link } from "react-router-dom";
 import { PessoaInterface } from "../pessoas/ListPessoa";
 import { LocaisInterface } from "../locais/ListLocais";
 
-const CreateDoacao = () => {
+const UpdateDoacao = () => {
 
     const [pessoaID, setPessoaID] = useState(0);
     const [localID, setLocalID] = useState(0);
@@ -14,6 +14,8 @@ const CreateDoacao = () => {
     const navigate = useNavigate();
     const [pessoas, setPessoas] = useState<PessoaInterface[]>([]);
     const [locais, setLocais] = useState<LocaisInterface[]>([]);
+
+    const {id} = useParams();
 
     useEffect(() => {
         {/* Caminho utilizado pela API*/}
@@ -30,6 +32,15 @@ const CreateDoacao = () => {
         });
   
       }, []);
+
+      useEffect(() => {
+        api.get(`/doacoes/${id}`).then(response => {
+            setPessoaID(response.data.pessoa.id);
+            setLocalID(response.data.local.id);
+            setData(response.data.data);
+        })
+    }, [id])
+    
   
     const handleClear = () => {
         setPessoaID(0);
@@ -37,7 +48,7 @@ const CreateDoacao = () => {
         setData('');
     };
 
-    const handleNewDoacao= async (event: React.FormEvent<HTMLFormElement>) => {
+    const UpdateDoacao= async (event: React.FormEvent<HTMLFormElement>) => {
 
         event.preventDefault();
 
@@ -52,28 +63,29 @@ const CreateDoacao = () => {
 
         // Enviar dados
         const data = {
+            id:id,
             pessoa_id:pessoaID,
             local_id:localID,
             data: formattedDate
         };
         try {
-            await api.post('/doacoes',data)
-            alert("Doação cadastrada com sucesso!")
+            await api.put('/doacoes',data)
+            alert("Doação atualizada com sucesso!")
             navigate("/doacoes")
         } catch (error) {
             console.error(error);
-            alert("Erro no cadastro de doação!")
+            alert("Erro na atualização de doação!")
         }
     }
 
     return(
 
         <div>
-            <h3>Cadastro de Doações</h3>
+            <h3>Atualizar Doações</h3>
             <div>
                 <Link to="/doacoes">Voltar</Link>
             </div>
-            <form onSubmit={handleNewDoacao}>
+            <form onSubmit={UpdateDoacao}>
 
                     <div>
                         <label htmlFor="pessoaID">Pessoa</label>
@@ -110,7 +122,7 @@ const CreateDoacao = () => {
                             />
                     </div>
 
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit">Atualizar</button>
                     <button type="button" onClick={handleClear}>Limpar</button>
 
             </form>
@@ -119,4 +131,4 @@ const CreateDoacao = () => {
     )
 }
 
-export default CreateDoacao
+export default UpdateDoacao
