@@ -11,4 +11,4 @@
 
 ## [Projeto final:](./Projeto/README.md)
 
-Apresente uma breve descrição do seu projeto.
+ O projeto prático consiste no desenvolvimento de uma API utilizando Node.js no backend e sendo consumida por React no frontend. O nome do projeto é Drifters, um sistema web onde será exibido um feed de fotos de carros preparados para drift, postadas pelos usuários. As principais funcionalidades do sistema incluem a criação de usuário, realização de login, visualização do feed de fotos, comentário em fotos de outros usuários e postagem de fotos. O banco de dados utilizado é o SQLite, contendo três tabelas referentes a usuário, fotos e comentários.

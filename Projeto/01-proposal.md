@@ -32,7 +32,7 @@
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Não foram criados protótipos para todas as páginas do projeto, possuindo ate o momento a logo do projeto, para a qual foi utilizado o Figma na criação, e uma imagem de como será a tela para cadastro de usuários.
+  Não foram criados protótipos para todas as páginas do projeto, possuindo até o momento a logo do projeto, para a qual foi utilizado o Figma na criação, e uma imagem de como será a tela para cadastro de usuários.
 
   ![Tela de cadastro](./cadastro-drifters.png)
   ![Logo Drifters](./svg-logo.svg)
