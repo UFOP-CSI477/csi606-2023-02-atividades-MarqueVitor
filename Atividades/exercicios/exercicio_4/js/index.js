@@ -24,22 +24,22 @@ const showError = (show) => {
     */
 }
 
-const insertRow = async () => {
+//const insertRow = async () => {
     //Recupere o input digitado
-    var nameValue = 
+    //var nameValue = 
 
-    const userInfos = await getRepository(nameValue)
+   // const userInfos = await getRepository(nameValue)
     
     /*  
         Se o elemento login retornado pela função getRepository 
         for undefined, significa que o usuário não existe, então será
         mostrado ao usuário uma mensagem de erro
     */
-    if(!userInfos[0]){
-        showError(false)
-        return true
-    }
+    //if(!userInfos[0]){
+   //     showError(false)
+ //       return true
+    //}
 
     //adicione o usuário digitado na tabela de id "myTable"
 
-}
+//}
