@@ -1,0 +1,97 @@
+ .foto {
+
+    margin: auto;
+    border-radius: .4rem;
+    height: 30rem;
+    background: white;
+    display: grid;
+    grid-template-columns: 36rem 25rem;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(.8);
+    animation: scaleUp 0.3s forwards;
+ }
+
+ @keyframes scaleUp{
+    to{
+        opacity: initial;
+        transform: initial;
+    }
+ }
+
+ .detalhes{
+    padding: 2rem 2rem 0 2rem;
+ }
+
+ .img{
+    grid-row: 1/4;
+ 
+ }
+ 
+ h1{
+    font-family: var(--type-second);
+    line-height: 1;
+    font-size: 2rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+ }
+
+ h1::after{
+        content: '';
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: #7F7F9F;
+        position: absolute;
+        bottom: 10px;
+        left: -5px;
+        border-radius: 0.2rem;
+        z-index: -1;
+ }
+
+ .comentario {
+    padding: 0 2rem ;
+
+ }
+
+ @media (max-width: 64rem){
+    .foto{
+        height: auto;
+        max-height: calc(100vh -4rem);
+        overflow-y: auto;
+        grid-template-columns: minmax(20rem, 40rem);
+    }
+    .img{
+        grid-row: 1;
+    }
+ }
+
+.user{
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.atributos{
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.atributos li::before{
+    content: "";
+    display: inline-block;
+    height: 20px;
+    margin-right: 0.5rem;
+    position: relative;
+    width: 2px;
+    top: 3px;
+    background: #7F7F9F;
+
+}

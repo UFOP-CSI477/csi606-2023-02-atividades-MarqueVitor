@@ -1,0 +1,103 @@
+POST http://localhost:7777/user
+Content-Type: application/json
+
+{
+    "nome":"Marcos",
+    "email":"marcos@drifters.com",
+    "senhaHash":"12345"
+
+}
+
+###
+POST http://localhost:7777/foto
+Content-Type: application/json
+
+{
+    "modelo":"Silvia S15",
+    "ano":"1998",
+    "imagens":"src\\images\\silviaS151998.jpg",
+    "idUsuario":3
+
+}
+
+###
+DELETE  http://localhost:7777/user
+Content-Type: application/json
+
+{   
+    "id": 7
+}
+
+
+###
+PUT http://localhost:7777/user
+Content-Type: application/json
+
+{   
+    "id":3,
+    "nome":"Roberto Dinamite",
+    "email":"roberto@drifters.com",
+    "senhaHash":"12345"
+
+}
+
+###
+DELETE  http://localhost:7777/foto
+Content-Type: application/json
+
+{   
+    "id":14
+}
+
+###
+PUT http://localhost:7777/foto
+Content-Type: application/json
+
+{   
+    "id":12,
+    "modelo":"Silvia S15",
+    "ano":"1994",
+    "imagens":"https://driftforu.com/cdn/shop/files/image_24180b60-cb6d-46ca-9976-5f29bc532727.jpg?v=1698623853",
+    "idUsuario":8
+
+}
+
+###
+POST http://localhost:7777/coment
+Content-Type: application/json
+
+{
+    "comentario":"TesteTestinho",
+    "idFoto":9,
+    "idUsuario":3
+
+}
+
+###
+DELETE  http://localhost:7777/coment
+Content-Type: application/json
+
+{
+    "id":45
+}
+
+###
+PUT http://localhost:7777/coment
+Content-Type: application/json
+
+{   
+    "id":4,
+    "comentario":"Excelente trabalho!",
+    "idFoto":11,
+    "idUsuario":9
+
+}
+
+###
+POST http://localhost:7777/login
+Content-Type: application/json
+
+{
+    "email":"joao-vitor@drifters.com",
+    "senha":"12345"
+}

@@ -1,0 +1,27 @@
+.fotos:nth-child(2){
+    grid-column: 2/4;
+    grid-row: span 2;
+
+}
+
+.fotos {
+    display: grid;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.fotos img {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
+    height: 100%; /* Garante que a imagem ocupe 100% da altura do contêiner */
+    object-fit: cover; /* Redimensiona e corta a imagem para preencher o contêiner */
+}
+
+@media (max-width: 40rem){
+    .fotos:nth-child(2){
+        grid-column: initial;
+        grid-row: initial;
+    
+    }
+    
+}

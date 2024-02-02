@@ -35,7 +35,8 @@
   Não foram criados protótipos para todas as páginas do projeto, possuindo até o momento a logo do projeto, para a qual foi utilizado o Figma na criação, e uma imagem de como será a tela para cadastro de usuários.
 
   ![Tela de cadastro](./cadastro-drifters.png)
-  ![Logo Drifters](./svg-logo.svg)
+  <img src="./svg-logo.svg" alt="Logo do projeto" width="250" height="250"/>
+
 
 ### 5. Referências
 

@@ -1,0 +1,43 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: stretch;
+    margin: 1rem;
+}
+
+.textarea {
+    display: block;
+    font-size: 1rem;
+    margin-left: 20px;
+    font-family: var(--type-first);
+    resize: none;
+    border: 1px solid #eee;
+    border-radius: .2rem;
+    padding: 0.5rem;
+    background: #eee;
+    transition: 0.2s;
+}
+
+.textarea:focus,
+.textarea:hover {
+    outline: none;
+    border-color: #B5B5CC;
+    background: white;
+    box-shadow: 0 0 0 3px #D9D9F2;
+}
+
+.btn{
+   border:none;
+   cursor: pointer;
+   color: #eee;
+   background: transparent;
+   overflow: hidden;
+
+}
+
+.btn:focus path,
+.btn:hover path{
+    fill: #490A64;
+    stroke:#D9D9F2;
+
+}
