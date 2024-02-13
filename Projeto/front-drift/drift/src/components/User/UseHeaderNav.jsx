@@ -30,10 +30,6 @@ const UserHeaderNav = () => {
             <MinhasFotos/> 
             {mobile && 'Minhas fotos'}
             </NavLink>
-            <NavLink to='estatistica'>
-                <Stats/>
-                {mobile && 'Estatísticas'}
-            </NavLink>
             <NavLink to='postar'>
                 <AdicionarFoto/>
                 {mobile && 'Adicionar Foto'}

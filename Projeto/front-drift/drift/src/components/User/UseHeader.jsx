@@ -10,9 +10,6 @@ const UserHeader = () => {
 
     React.useEffect(() =>{
         console.log(location)
-        if('/conta/estatistica' === location.pathname){
-            setTitle("Estatísticas")
-        }
         if('/conta/postar' === location.pathname){
             setTitle("Poste Sua Foto")
         }
