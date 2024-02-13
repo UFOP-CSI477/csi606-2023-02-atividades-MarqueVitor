@@ -26,7 +26,7 @@ const LoginCreate = () => {
                 };
 
             try {
-                const response = await api.post("/foto", data); 
+                const response = await api.post("/user", data); 
 
                 // Teste de utilização de token apenas estudo 
                 window.localStorage.setItem('token', response.data.token)
