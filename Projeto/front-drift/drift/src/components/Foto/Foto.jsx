@@ -8,13 +8,10 @@ import FotoDelete from "./FotoDelete";
 const FotoContent = ({foto}) => {
 
     const user = React.useContext(UserContext);
-    console.log(user.date)
 
     const nome=foto?.usuario?.nome
 
     const {comentarios} = foto;
-
-    console.log(foto.id)
 
     return(
         <div className={styles.foto}>

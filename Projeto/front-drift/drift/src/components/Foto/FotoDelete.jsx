@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './FotoDel.module.css'
 import api from '../../services/api'
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 const FotoDelete = ({id}) => {
 
@@ -20,9 +20,11 @@ const FotoDelete = ({id}) => {
                 }); 
                 if(response.status === 200) {
                     alert("Foto deletada com sucesso")
-                    navigate('/conta')
+                    navigate('/conta/conta')
+                    setTimeout(() => {
+                        navigate('/conta');
+                    }, 100);
             }
-                console.log(response)
             } catch (error) {
                 console.error(error);
             }   
