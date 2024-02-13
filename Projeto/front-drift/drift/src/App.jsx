@@ -11,22 +11,23 @@ import ProtectedRouter from './components/Help/ProtectedRouter';
 import NotFound from './components/NotFound';
 
 const App = () => {
-  return <div>
+  return <div className='App'>
     
     <BrowserRouter>
     <UserStorage>
       
 
         <Header/>
-
-          <Routes>
-            <Route path='*' element={<NotFound/>}/>
-            <Route path='/login/*' element={<Login/>}/>
-            <Route path='/conta/*' element={
-            <ProtectedRouter>
-              <User/>
-            </ProtectedRouter>}/>
-          </Routes>
+          <main className='AppBody'>
+            <Routes>
+              <Route path='*' element={<NotFound/>}/>
+              <Route path='/login/*' element={<Login/>}/>
+              <Route path='/conta/*' element={
+              <ProtectedRouter>
+                <User/>
+              </ProtectedRouter>}/>
+            </Routes>
+          </main>
         <Footer/>
 
       
