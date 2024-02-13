@@ -4,6 +4,7 @@ import ButtonComponent from '../Form/Button';
 import useFormComponent from '../../Hooks/useForm';
 import api from '../../services/api';
 import { UserContext } from '../../UserContext';
+import Head from '../Help/Head';
 
 const LoginCreate = () => {
 
@@ -41,6 +42,7 @@ const LoginCreate = () => {
 
     return (
         <section className='animeLeft'>
+            <Head title= 'Cadastrar'/>
             <h1 className='title'>Cadastre-se</h1>
             <form onSubmit={handleSubmit}>
                 <InputComponent label='Nome' type='text' name='nome'{...name}/>

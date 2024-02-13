@@ -15,8 +15,6 @@ const FeedFotos = ({setModalFoto}) => {
 
     }, []);
 
-    console.log(fotos)
-
     if(fotos){
 
       return(

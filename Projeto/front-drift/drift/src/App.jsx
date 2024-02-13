@@ -8,6 +8,7 @@ import './App.css'
 import { UserStorage } from './UserContext';
 import User from './components/User/User';
 import ProtectedRouter from './components/Help/ProtectedRouter';
+import NotFound from './components/NotFound';
 
 const App = () => {
   return <div>
@@ -19,13 +20,13 @@ const App = () => {
         <Header/>
 
           <Routes>
+            <Route path='*' element={<NotFound/>}/>
             <Route path='/login/*' element={<Login/>}/>
             <Route path='/conta/*' element={
             <ProtectedRouter>
               <User/>
             </ProtectedRouter>}/>
           </Routes>
-
         <Footer/>
 
       

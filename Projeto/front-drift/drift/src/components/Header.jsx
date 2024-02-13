@@ -15,7 +15,7 @@ const Header = () => {
                     <Logo/>
                 </Link>
                 {date ? (
-                <Link className={styles.login} to="/conta">   
+                <Link className={styles.login} to="/conta/conta">   
                 {date.nome}
                 </Link>) : (
                 <Link className={styles.login} to="/login">   
