@@ -39,10 +39,40 @@
 ### 4. Principais desafios e dificuldades
 <!-- Descrever os principais desafios encontrados no desenvolvimento do trabalho, quais foram as dificuldades e como elas foram superadas e resolvidas. -->
 
- As principais dificuldades encontradas foram a tentativa de uso do token de autenticação e a utilização do React. O token foi utilizado somente para estudo e para implementação em futuros trabalhos. Já o React foi utilizado em sala de aula, como foi o primeiro contato para realização do trabalho, se tornou uma oportunidade de aprender e se interessar por novas tecnologias. 
+ As principais dificuldades encontradas foram a tentativa de uso do token de autenticação e a utilização do React. O token foi utilizado somente para estudo e para implementação em trabalhos futuros. Já o React foi utilizado em sala de aula, como foi o primeiro contato para realização do trabalho, se tornou uma oportunidade de aprender e se interessar por novas tecnologias. 
 
 ### 5. Instruções para instalação e execução
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
+
+  #### Backend
+
+  1. Ter o node instalado.
+    - [Node](https://nodejs.org/en)
+  2. Criar um arquivo .env na pasta raiz.
+  3. Colocar dentro do .env 
+  ```bash
+  DATABASE_URL="file:./aplicacao.sqlite"
+  ```
+  4. Iniciar terminal na raiz e instalar depêndencias necessárias com o comando:
+  ```bash
+  npm install
+  ```
+  5. Iniciar aplicação com o comando:
+  ```bash
+  npm run dev
+  ```
+
+  #### Frontend
+
+  1. Iniciar terminal na raiz e instalar depêndencias necessárias com o comando:
+  ```bash
+  npm install
+  ```
+  2. Iniciar aplicação com o comando:
+  ```bash
+  npm run dev
+  ```
+  3. Acessar a rota /login ou clicar na logo.  
 
 ### 6. Referências
 <!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
