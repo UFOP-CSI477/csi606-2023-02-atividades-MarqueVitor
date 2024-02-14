@@ -1,43 +1,80 @@
-# **CSI606-2023-02 - Proposta de Trabalho Final**
+# **CSI606-2023-02 - Presencial - Trabalho Final - Resultados**
 
 ## *Aluna(o): Vitor Marques dos Santos*
 
 --------------
-<!-- Descrever um resumo sobre o trabalho. -->
+
+<!-- Este documento tem como objetivo apresentar o projeto desenvolvido, considerando o que foi definido na proposta e o produto final. -->
 
 ### Resumo
 
-  A atividade de projeto prático consiste no desenvolvimento de uma API utilizando Node.js no backend e sendo consumida por React no frontend. O nome do projeto é Drifters, um sistema web onde será exibido um feed de fotos de carros preparados para drift, postadas pelos usuários. As principais funcionalidades do sistema incluem a criação de usuário, realização de login, visualização do feed de fotos, comentário em fotos de outros usuários e postagem de fotos. O banco de dados utilizado é o SQLite, contendo três tabelas referentes a usuário, fotos e comentários. Possuido as seguintes operações para cada entidade:
+  A atividade de projeto prático consiste no desenvolvimento de uma API utilizando Node.js no backend e sendo consumida por React no frontend. O nome do projeto é Drifters, um sistema web onde será exibido um feed de fotos de carros preparados para drift, postadas pelos usuários. As principais funcionalidades do sistema incluem a criação de usuário, realização de login, visualização do feed de fotos, comentário em fotos de outros usuários e postagem de fotos.
+
+#### Modelo utilizado
+
+![Modelo](./Esquema-BD.png)
+
+### 1. Funcionalidades implementadas
+<!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
+
+ - CRUD do usuário.
+ - CRUD do das fotos.
+ - CRUD dos comentários.
+ - Página de login.
+ - Visualização do feed de fotos.
+ - Comentários em fotos.
   
-  - Inserir - Create
-  - Atualizar - Update
-  - Excluir - Delete
-  - Recuperar - Read - todos os itens.
+### 2. Funcionalidades previstas e não implementadas
+<!-- Descrever as funcionalidades que eram previstas e não foram implementas, apresentando uma breve justificativa do porquê elas não foram incluídas -->
 
-<!-- Apresentar o tema. -->
-### 1. Tema
+ - Scroll infinito do feed de fotos.
+ - Utilização de token para autentiação e persistência do login.
+ - Contabilização de likes (Não era parte do escopo, mas eu gostaria de ter colocado na aplicação).
 
-  O trabalho final tem como tema o desenvolvimento de uma aplicação para visualização de um feed de fotos e interação através de comentários. O projeto possui o nome de Drifters.
+### 3. Outras funcionalidades implementadas
+<!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
 
-<!-- Descrever e limitar o escopo da aplicação. -->
-### 2. Escopo
+ Não se aplica. 
 
-  Este projeto terá as seguintes funcionalidades: cadastrar usuário, realizar login, postar fotos, comentar fotos e realizar alterações sobre as postagens feitas. 
+### 4. Principais desafios e dificuldades
+<!-- Descrever os principais desafios encontrados no desenvolvimento do trabalho, quais foram as dificuldades e como elas foram superadas e resolvidas. -->
 
-<!-- Apresentar restrições de funcionalidades e de escopo. -->
-### 3. Restrições
+ As principais dificuldades encontradas foram a tentativa de uso do token de autenticação e a utilização do React. O token foi utilizado somente para estudo e para implementação em trabalhos futuros. Já o React foi utilizado em sala de aula, como foi o primeiro contato para realização do trabalho, se tornou uma oportunidade de aprender e se interessar por novas tecnologias. 
 
-  Neste trabalho, não será considerada a utilização de token de autenticação para o acesso às funcionalidades da API (criado apenas para testes e estudo). A única interação entre o usuário e as postagens serão os comentários, não está no escopo do trabalho a contabilização de likes.
+### 5. Instruções para instalação e execução
+<!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
 
-<!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
-### 4. Protótipo
+  #### Backend
 
-  Não foram criados protótipos para todas as páginas do projeto, possuindo até o momento a logo do projeto, para a qual foi utilizado o Figma na criação, e uma imagem de como será a tela para cadastro de usuários.
+  1. Ter o node instalado.
+    - [Node](https://nodejs.org/en)
+  2. Criar um arquivo .env na pasta raiz.
+  3. Colocar dentro do .env 
+  ```bash
+  DATABASE_URL="file:./aplicacao.sqlite"
+  ```
+  4. Iniciar terminal na raiz e instalar depêndencias necessárias com o comando:
+  ```bash
+  npm install
+  ```
+  5. Iniciar aplicação com o comando:
+  ```bash
+  npm run dev
+  ```
 
-  ![Tela de cadastro](./cadastro-drifters.png)
-  <img src="./svg-logo.svg" alt="Logo do projeto" width="250" height="250"/>
+  #### Frontend
 
+  1. Iniciar terminal na raiz e instalar depêndencias necessárias com o comando:
+  ```bash
+  npm install
+  ```
+  2. Iniciar aplicação com o comando:
+  ```bash
+  npm run dev
+  ```
+  3. Acessar a rota /login ou clicar na logo.  
 
-### 5. Referências
+### 6. Referências
+<!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
 
-  Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT.
+ Não se aplica. 
