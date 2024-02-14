@@ -40,4 +40,4 @@
 
 ### 5. Referências
 
-  Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT.
+  Não se aplica.
